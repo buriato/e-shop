@@ -1,0 +1,28 @@
+.top
+  border-bottom: 6px solid $border-color
+  padding: 30px 0
+
+.top__wrap
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  align-items: center
+
+.top__left
+  @include tablet
+    flex-basis: 100%
+    text-align: center
+    margin-bottom: 15px
+
+.top__right
+  @include tablet
+    flex-basis: 100%
+    justify-content: center
+
+.top__menu
+  width: 58%
+  @include tablet
+    flex-basis: 80%
+  @include phone
+    flex-basis: 100%
+    margin-bottom: 15px

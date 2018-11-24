@@ -69,3 +69,22 @@
   padding: 0 $padding
   box-sizing: border-box
   margin: 0 auto
+
+
+// media queries
+
+@mixin desktop
+  @media (max-width: 1200px)
+    @content
+
+@mixin laptop
+  @media (max-width: 992px)
+    @content
+
+@mixin tablet
+  @media (max-width: 768px)
+    @content
+
+@mixin phone
+  @media (max-width: 480px)
+    @content
