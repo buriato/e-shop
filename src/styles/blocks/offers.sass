@@ -1,0 +1,103 @@
+.offers
+  display: flex
+  justify-content: space-between
+  margin: 50px 0 25px
+.offers__right, .offers__left
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.offers__elem
+  position: relative
+
+.offers__img
+  display: block
+  max-width: 100%
+
+.offers__info
+  position: absolute
+  z-index: 1
+  left: 30px
+  p
+    margin: 10px 0
+
+
+.offers__cat
+  font-size: 13px
+  line-height: 36px
+  letter-spacing: 0.65px
+  font-weight: 500
+  color: $gray-text
+
+
+.offers__name
+  font-size: 19px
+  letter-spacing: 1.425px
+  line-height: 24px
+  font-weight: 700
+  color: $gray-text
+  text-transform: uppercase
+
+
+.offers__btn
+  @include btn()
+
+.offers__new
+  position: absolute
+  right: 10px
+  top: 10px
+  font-size: 11px
+  line-height: 14px
+  padding: 5px 10px
+  background-color: $black
+  color: $white
+  text-transform: uppercase
+  &::after
+    position: absolute
+    bottom: -9px
+    left: 0
+    content: ''
+    border: 6px solid transparent
+    border-top: 6px solid $black
+    border-left: 6px solid $black
+
+.offers__center
+  margin: 0 2.1%
+  .offers__info
+    position: absolute
+    top: 100px
+.offers__left
+  .offers__info
+    left: 0
+    bottom: 15px
+    width: 100%
+
+.offers__right
+  .offers__info
+    top: 30px
+    width: 100%
+
+.offers__disc
+  font-weight: 700
+  color: $gray-text
+  text-align: center
+  text-transform: uppercase
+
+
+
+.offers__disc-1
+  font-size: 22px
+  line-height: 25px
+  margin: 0
+
+.offers__right
+  .offers__info--glasses
+    top: auto
+    left: 0
+    bottom: 10px
+    width: 100%
+.offers__disc-2
+  text-align: center
+  font-size: 13px
+  line-height: 25px
+
