@@ -1,27 +1,87 @@
+
 .slider
   background: linear-gradient(90deg, #cdced2, #c5c6ca)
+
 .slider__item
   display: flex
   align-items: center
   padding: 0 60px
   box-sizing: border-box
+  @include phone
+    padding: 0 15px
+
+.owl-carousel
+  max-width: 1920px
+  margin: 0 auto
+
+  .owl-item
+    img
+      display: block
+      width: auto
+
+  .owl-nav
+    button.owl-prev, button.owl-next
+      z-index: 1000
+      background: url('../images/sprite-arrow.png') 0 0 no-repeat
+      width: 49px
+      height: 49px
+      border: none
+      box-shadow: none
+      position: absolute
+      left: 5px
+      cursor: pointer
+      @include center(y)
+
+    button.owl-prev
+      &:hover
+        background-position: 0 -49px
+    button.owl-next
+      background-position: -49px 0
+      right: 5px
+      left: auto
+      &:hover
+        background-position: -49px -49px
+  .owl-dots
+    text-align: center
+    padding: 0 0 15px 0
+
+    .owl-dot
+      width: 10px
+      height: 10px
+      border-radius: 10px
+      background-color: $white
+      border: none
+      box-shadow: none
+      padding: 0
+      margin: 0 5px
+      cursor: pointer
+    .active
+      background-color: $black
 
 .slider__img
   flex-basis: 50%
   align-self: flex-end
+  @include tablet
+      display: none
   img
     display: block
-    max-width: 50%
+    max-width: 100%
+
 
 .slider__info
   flex-basis: 50%
   padding-left: 70px
   box-sizing: border-box
+  @include tablet
+    flex-basis: 100%
+    padding-left: 0px
   p
     font-size: 14px
     line-height: 26px
     color: $slider-text
     margin: 25px 0
+    @include tablet
+      margin: 15px 0
 
   .slider__title
     font-size: 116px
@@ -30,6 +90,17 @@
     color: $black
     letter-spacing: 2.32px
     text-transform: uppercase
+    @include desktop
+      font-size: 70px
+      line-height: 80px
+    @include tablet
+      font-size: 40px
+      line-height: 50px
+      letter-spacing: 1px
+    @include phone
+      font-size: 30px
+      line-height: 35px
+
 
   .slider__type
     font-size: 18px
@@ -47,6 +118,8 @@
     display: flex
     flex-wrap: wrap
     margin: 25px 0
+    @iclude tablet
+      margin: 15px 0
     a
       height: 37px
       width: 37px
@@ -63,3 +136,5 @@
 
 .slider__btn
   @include btn
+
+
