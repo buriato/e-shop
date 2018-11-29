@@ -1,0 +1,24 @@
+.cat
+  margin: 40px 0
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  @include tablet
+    margin: 25px 0
+
+.cat__item
+  margin: 10px 25px
+  @include tablet
+    margin: 5px
+.cat__link
+  text-decoration: none
+  color: $grey-text
+  font-size: 19px
+  line-height: 20px
+  letter-spacing: 1.9px
+  border-bottom: 1px solid transparent
+  font-weight: 600
+  @include tablet
+    font-size: 16px
+  &:hover
+    border-bottom-color: $grey-text
