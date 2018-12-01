@@ -1,0 +1,52 @@
+.prod
+  margin: 90px 0
+  @include tablet
+    margin: 25px 0
+
+.prod__title
+  font-size: 26px
+  line-height: 30px
+  font-weight: 600
+  text-transform: uppercase
+  color: $gray-text
+  letter-spacing: .18rem
+  text-align: center
+
+.prod__text
+  text-align: center
+  margin: 20px 0
+  font-size: 14px
+  line-height: 20px
+  text-transform: lowercase
+  letter-spacing: .18rem
+
+.prod__block
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  margin: 40px 0
+  @include media(640px)
+    justify-content: center
+
+.prod__elem
+  flex-basis: 31.5%
+  position: relative
+  @include media(640px)
+    flex-basis: 48%
+    margin: 5px 1%
+  @include phone
+    flex-basis: 100%
+    margin: 10px 0
+
+.prod__img
+  max-width: 100%
+  display: block
+  margin: 0 auto
+
+.prod__btn
+  position: absolute
+  @include center(x)
+  bottom: 20px
+  $values: (fs: 13px,lh: 20px,ls: .05rem,w: 175px,br: 60px)
+  @include btn($values...)
+    padding: 20px 0

@@ -1,0 +1,54 @@
+.feat
+  margin: 90px 0
+
+.feat__title
+  font-size: 26px
+  line-height: 30px
+  font-weight: 600
+  text-transform: uppercase
+  color: $gray-text
+  letter-spacing: .18rem
+  text-align: center
+
+.feat__block
+  display: flex
+  justify-content: space-between
+
+.feat__elem
+  flex-basis: 23%
+  p
+    font-size: 15px
+    line-height: 17px
+    margin: 7px 0
+
+.feat__img
+  display: block
+  max-width: 100%
+  margin: 0 auto 20px
+
+.feat__link
+  font-size: 15px
+  line-height: 17px
+  text-decoration: none
+  color: $black
+  font-weight: 700
+  &:hover
+    text-decoration: underline
+
+.feat__brand
+  color: $brand-text
+
+.feat__price
+  font-size: 15px
+  font-weight: 700
+  span
+    font-weight: 400
+    margin-right: 10px
+    text-decoration: line-through
+
+.feat__btn
+  $values: (fs: 12px,ls: .03rem,lh: 20px,bg: transparent, w: 175px, br: 60px, clr: $black)
+  @include btn($values...)
+    border: 2px solid #d9c8aa
+  margin: 50px auto
+  padding: 18px 0

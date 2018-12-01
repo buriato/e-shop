@@ -1,0 +1,29 @@
+.feat
+  p.feat__title Featured products
+  ul.cat
+    -var cat = ['All','spring-summer','sweatshirt','sneakers','gadgets','outdoor']
+    each item in cat
+      li.cat__item
+        a(href="#").cat__link= item
+  .feat__block
+    .feat__elem
+      img(src="assets/images/featured1.jpg")
+      a(href="#", title="title").feat__link Ted Baker Womens Light
+      p.feat__brand Gucci
+      p.feat__price #[span $120.00] $70.00
+    .feat__elem
+      img(src="assets/images/featured2.jpg")
+      a(href="#", title="title").feat__link Ted Baker Womens Light
+      p.feat__brand Gucci
+      p.feat__price #[span $120.00] $70.00
+    .feat__elem
+      img(src="assets/images/featured3.jpg")
+      a(href="#", title="title").feat__link Ted Baker Womens Light
+      p.feat__brand Gucci
+      p.feat__price #[span $120.00] $70.00
+    .feat__elem
+      img(src="assets/images/featured4.jpg")
+      a(href="#", title="title").feat__link Ted Baker Womens Light
+      p.feat__brand Gucci
+      p.feat__price $120.00 #[span $70.00]
+  a(href="#").feat__btn Show more

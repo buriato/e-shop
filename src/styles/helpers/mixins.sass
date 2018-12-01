@@ -90,6 +90,10 @@
 
 // media queries
 
+@mixin media($maw)
+  @media (max-width: $maw)
+    @content
+
 @mixin desktop
   @media (max-width: 1400px)
     @content
