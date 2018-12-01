@@ -2,6 +2,8 @@
   display: flex
   justify-content: space-between
   margin: 50px 0 25px
+  @include laptop
+    flex-wrap: wrap
 .offers__right, .offers__left
   display: flex
   flex-direction: column
@@ -63,16 +65,41 @@
 
 .offers__center
   margin: 0 2.1%
+  @include laptop
+    margin: 0
+  @include tablet
+    flex-basis: 100%
+    display: block
+    .offers__elem
+      max-width: 470px
+      margin: 0 auto
+    .offers__info
+      top: 50px
   .offers__info
     position: absolute
     top: 100px
 .offers__left
+  @include tablet
+    flex-basis: 100%
+    display: block
+    .offers__elem
+      max-width: 277px
+      margin: 20px auto
   .offers__info
     left: 0
     bottom: 15px
     width: 100%
 
 .offers__right
+  @include laptop
+    flex-basis: 100%
+    display: block
+    .offers__elem
+      max-width: 371px
+      margin: 20px auto
+  @include tablet
+    .offers__info
+      top: 15px
   .offers__info
     top: 30px
     width: 100%
