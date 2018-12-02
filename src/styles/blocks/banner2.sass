@@ -1,0 +1,17 @@
+.banner__left
+  background: url('../images/banner2.jpg') left center no-repeat #d7dbd5
+  background-size: cover
+  justify-content: flex-start
+  @include media(880px)
+    background: #d7dbd5
+  .banner__info
+    margin-right: 0
+    margin-left: 70px
+    @include media(1100px)
+      margin-left: 0
+
+  .banner__btn
+    $values: (bg: $black, fs: 14px,lh: 23px,ls: .05rem,w: 205px,br: 70px,clr: $white)
+    @include btn($values...)
+    padding: 24px 0
+    margin: 35px auto 0
