@@ -1,5 +1,10 @@
 .feat
   margin: 90px 0
+  @include media(1300px)
+    width: calc(100% - 100px)
+    margin: 90px auto
+  @include media(768px)
+    margin: 25px auto
 
 .feat__title
   font-size: 26px
@@ -52,3 +57,28 @@
     border: 2px solid #d9c8aa
   margin: 50px auto
   padding: 18px 0
+
+.feat
+  .owl-nav
+    button.owl-prev, button.owl-next
+      z-index: 1000
+      background: url('../images/sprite-arrow2.png') 0 0 no-repeat
+      width: 49px
+      height: 49px
+      border: none
+      box-shadow: none
+      position: absolute
+      left: -55px
+      top: calc(50% - 49px)
+      cursor: pointer
+      @include center(y)
+
+    button.owl-prev
+      &:hover
+        background-position: 0 -49px
+    button.owl-next
+      background-position: -49px 0
+      right: -55px
+      left: auto
+      &:hover
+        background-position: -49px -49px
