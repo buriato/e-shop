@@ -2,13 +2,26 @@ const gulp = require("gulp");
 const pug = require("gulp-pug");
 const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
+const browserSync = require("browser-sync");
+const sourcemaps = require("gulp-sourcemaps");
+
 const cssunit = require("gulp-css-unit");
 const notify = require("gulp-notify");
 const rename = require("gulp-rename");
-const sourcemaps = require("gulp-sourcemaps");
-const del = require("del");
 const fs = require("fs");
-const browserSync = require("browser-sync");
+const replace = require('gulp-replace');
+const run = require("run-sequence");
+const del = require("del");
+
+// images
+const svgSprite = require('gulp-svg-sprite');
+const svgmin = require('gulp-svgmin');
+const cheerio = require('gulp-cheerio');
+const imagemin = require("gulp-imagemin");
+const imageminJpegRecompress = require('imagemin-jpeg-recompress');
+const pngquant = require('imagemin-pngquant');
+
+// webpack
 const gulpWebpack = require("gulp-webpack");
 const webpack = require("webpack");
 const webpackConfig = require("./webpack.config.js");
